@@ -4,7 +4,7 @@ import Dashboard from './pages/Dashboard';
 import Signin from './pages/Signin';
 import NotFound from './pages/NotFound';
 import Header from './components/Header';
-import useBackgroundImageRouter from './hooks/useBackgroundImageRouter';
+import { useBackgroundImageRouter } from 'grass-roots-react';
 import { backgroundImageMap } from './content'
 
 function App() {
