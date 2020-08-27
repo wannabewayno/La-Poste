@@ -10,7 +10,7 @@ function App() {
     <Router>
           <Header
             text='La Poste'
-            color='white'
+            color='beige'
           />
           <Switch>
             <Route exact path={["/", "/dashboard"]}>
