@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormContainer, SearchBar, SubmitButton, Container } from 'grass-roots-react';
+import { FormContainer, SearchBar, SubmitButton } from 'grass-roots-react';
 import { colours } from '../../content/index.js';
 
 const { backgroundColor } = colours;

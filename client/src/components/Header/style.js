@@ -6,7 +6,7 @@ export const headerStyle = {
 
 export const headlineStyle = {
     color:'inherit',
-    fontFamily:'MuseoModerno',
+    fontFamily:'',
     fontSize:'2.6rem',
     margin:'0 5%',
     fontWeight:'400'

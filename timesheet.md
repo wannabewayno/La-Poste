@@ -14,6 +14,11 @@ A rough Estimate for man hours put into this project
 ### 7:41pm stop for a run and dinner (1hr 1/2)
 
 ### 9:22pm back from break
+* create basic SignIn Form
+* create basic SignUp Form
+### 10:07pm stop for tea break
 
-### stop for 
+### 10:16pm back from break
+
+### stop for bed
 
