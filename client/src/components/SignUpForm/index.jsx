@@ -12,7 +12,7 @@ export default function(){
     }
 
     return (
-        <div style={{maxWidth:'max(300px,50vw)'}}>
+        <div >
             <FormContainer onSubmit={login}>
                     <SearchBar
                         name={{display:'Username', id:'username', toDisplay:true}}
