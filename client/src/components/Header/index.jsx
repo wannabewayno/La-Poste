@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLocation, useParams } from 'react-router-dom'; 
 import { headlineStyle, headerStyle } from './style';
 
 export default function Header({
