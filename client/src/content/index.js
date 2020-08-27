@@ -6,3 +6,7 @@ export const backgroundImageMap = {
     '/dashboard':{ image: table, positionX:'center', positionY:'10vh'},
     '/signin':{ image: typewriter, positionX:'center', positionY:'10vh' },
 }
+
+export const colours = {
+    backgroundColor:'rgb(255,255,255)'
+}

@@ -4,8 +4,16 @@ A rough Estimate for man hours put into this project
 ## Friday 27th August
 ### 4:00pm start
 * so far, a react app, deployed on heroku <a href="https://la-poste.herokuapp.com/">here</a>, with basic api routing built, controllers built and react router displaying a simple 'this is a dashboard" or "this is a signin page"
-### 5:03pm stop for coffee break
+### 5:03pm stop for coffee break (1hr)
 
 ### 6:10pm back from break
 * made small adjustments whilst on the phone regards to import statements for react router.
+* found background images from unsplash to use with background router
+* troubleshoot react-router causing server error on heroku (missing require statement in routes)
+* trouble shooting an import error with my own npm package :D. Fixed, now I can use all       custom built react components from this library through the rest of the build
+### 7:41pm stop for a run and dinner (1hr 1/2)
+
+### 9:22pm back from break
+
+### stop for 
 

@@ -1,8 +1,11 @@
 import React from 'react';
-import Loginfrom from '../../components/LoginForm';
+import Loginform from '../../components/SignInForm';
+import { Container } from 'grass-roots-react';
 
 export default function Signin(){
     return (
-        <p>this is a signin page</p>
+        <Container>
+            <Loginform/>
+        </Container> 
     )
 }
