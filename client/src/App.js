@@ -1,6 +1,7 @@
 import React from 'react';
 import Dashboard from './pages/Dashboard';
 import Signin from './pages/Signin';
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
