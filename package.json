@@ -12,7 +12,8 @@
   "express": "^4.17.1",
   "grass-roots-react": "^0.4.29",
   "if-env": "^1.0.4",
-  "instant-mvc": "^0.3.10"
+  "instant-mvc": "^0.3.10",
+  "react-router-dom": "^5.2.0"
  },
  "devDependencies": {
   "concurrently": "^5.2.0",
