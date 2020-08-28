@@ -30,6 +30,12 @@ A rough Estimate for man hours put into this project
 ### 8:40am stop for meeting in the city
 
 ### 12:00pm start
-* 
-### stop for phone interview
+* Added a PostList component to display an array of JSON objects to html
+* started creating markup for the SideBar 
+### 12:22pm stop for lunch and phone call
+
+### 1:00pm start
+
+
+
 

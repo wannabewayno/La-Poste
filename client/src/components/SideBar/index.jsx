@@ -12,7 +12,7 @@ export default function(){
 
     return (
         // container to hold the ten posts
-        <aside>
+        <aside style={}>
             <Button
                 text='Load Posts'
                 color='black'
