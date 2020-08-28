@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'grass-roots-react';
 import PostList from '../PostList';
+import { asideStyle } from './style';
 
 export default function(){
 
@@ -12,7 +13,7 @@ export default function(){
 
     return (
         // container to hold the ten posts
-        <aside style={}>
+        <aside style={asideStyle}>
             <Button
                 text='Load Posts'
                 color='black'

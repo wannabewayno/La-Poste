@@ -7,14 +7,16 @@ import { Container } from 'grass-roots-react';
 
 export default function Dashboard(){
     return (
-        <>
-            <SideBar/>
+        <main style={{height:'80vh'}}>
 
-            <Container>
-                <Post/>
-            </Container>
+            <section style={{display:'flex', height:'100%',}}>
+            	<SideBar/>
+            	<Container>
+            	    <Post/>
+            	</Container>
+            </section>
 
             <Footer/>
-        </>
+        </main>
     )
 }
