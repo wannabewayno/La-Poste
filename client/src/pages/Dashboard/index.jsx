@@ -7,7 +7,7 @@ import { Container } from 'grass-roots-react';
 
 export default function Dashboard(){
     return (
-        <main style={{height:'80vh'}}>
+        <main style={{height:'85vh'}}>
 
             <section style={{display:'flex', height:'100%',}}>
             	<SideBar/>

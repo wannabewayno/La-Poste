@@ -7,6 +7,7 @@ export default function(){
 
     function loadPosts(){
         //calls /api/posts to get posts
+        console.log('loading posts');
     }
 
     const posts = [{text:'hello world'},{text:'hello world'},{text:'hello world'}]
