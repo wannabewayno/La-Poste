@@ -26,6 +26,6 @@ A rough Estimate for man hours put into this project
 
 ## Friday 28th August
 ### 8:26am start
-* 
-### stop for meeting in the city
+* shifting focus to the dashboard, created sidebar, post, menubuttons and footer components. Have them returning trivial P tags for the moment
+### 8:40am stop for meeting in the city
 
