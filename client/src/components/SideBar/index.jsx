@@ -14,7 +14,7 @@ export default function(){
         });
 
     async function loadMore(){
-        // calls an API to get posts
+        
         console.log('loading posts');
 
         // posts come in groups of 10, grouped by an id
@@ -22,16 +22,18 @@ export default function(){
         const postGroup = posts.userId + 1
 
         // set loading posts to true here
+
+        // calls an API to get posts
         const allPosts = await API.getPosts();
         let newPosts = allPosts.filter(post => post.userId === postGroup);
 
-        // let's generate a body for the post as the provided enpoint only comes with a title
+        // let's generate a body for the post as the provided endpoint only comes with a title
         newPosts = newPosts.map(post => {
             post.body = randomParagraph();
             return post;
         })
         // set loading posts to false here
-    
+        console.log(newPosts);
         // set our state to these posts
         setPosts({
             posts:newPosts,
@@ -40,13 +42,14 @@ export default function(){
         
     }
 
+    // loads initial posts on page load
     useEffect(()=> {
         loadMore();
     },[])
 
 
     return (
-        // container to hold the ten posts
+        // container to hold the Post titles
         <aside style={asideStyle}>
             <Button
                 text='Load more'

@@ -49,6 +49,17 @@ A rough Estimate for man hours put into this project
 * changed input compnents and made created lorem for the body for the post as it only has a title from the API
 ### 5:36pm break
 
+### 5:53pm start
+* Reading up on react-redux. I have not previously used Redux before (clever prop drilling :D)
+### 7:03pm stop for dinner
+
+### 8:31pm start
+* reading up on react redux, starting implementing the store and reducers
+### 9:51pm stop for break;
+
+### 10:33pm start;
+### stop
+
 
 
 
