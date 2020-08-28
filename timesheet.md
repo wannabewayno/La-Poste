@@ -19,6 +19,10 @@ A rough Estimate for man hours put into this project
 ### 10:07pm stop for tea break
 
 ### 10:16pm back from break
+* created a turntable component, flips the sign-in and sign-up forms via a small button underneath the main (sign-up or create account buttons), was a bit fiddly, burned a bit of time but I had fun doing it.
+* adjusted CSS slightly so for mobile friendly design and without the form being too big for desktop.
+* signin page almost complete, the forms needs hooking up to the routes, and a better colour scheme, colour has not be chosen at this stage
+### 12:02am stop for bed
 
-### stop for bed
+
 
