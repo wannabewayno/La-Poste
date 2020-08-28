@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from 'grass-roots-react';
 import PostList from '../PostList';
 import { asideStyle } from './style';
@@ -6,17 +6,29 @@ import API from '../../utils/API';
 
 export default function(){
 
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState(
+        {
+            posts:[],
+            userId:0
+        });
 
-    async function loadPosts(){
+    async function loadMore(){
         // calls an API to get posts
         console.log('loading posts');
+        
         // set loading posts to true here
-        const posts = await API.getPosts();
-        setPosts(posts);
+        const newPosts = await API.getPosts();
+        const postGroup = posts.userId + 1
+        setPosts({
+            posts:newPosts.filter(post => post.userId === postGroup),
+            userId:postGroup
+        });
         // set loading posts to false here
-        console.log(posts);
     }
+
+    useEffect(()=> {
+        loadMore();
+    },[])
 
 
     return (
@@ -25,11 +37,11 @@ export default function(){
             <Button
                 text='Load more'
                 color='black'
-                onClick={loadPosts}
+                onClick={loadMore}
                 size='small'
                 style={{marginTop:'1em'}}
             />
-            <PostList posts={posts}/>
+            <PostList posts={posts.posts}/>
         </aside>
     )
 }

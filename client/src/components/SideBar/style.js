@@ -5,5 +5,6 @@ export const asideStyle = {
     flexDirection:'column',
     alignItems:'center',
     height:'100%',
-    padding:'0 1em'
+    padding:'0 1em',
+    overflowY:'auto'
 }
