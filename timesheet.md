@@ -29,3 +29,7 @@ A rough Estimate for man hours put into this project
 * shifting focus to the dashboard, created sidebar, post, menubuttons and footer components. Have them returning trivial P tags for the moment
 ### 8:40am stop for meeting in the city
 
+### 12:00pm start
+* 
+### stop for phone interview
+
