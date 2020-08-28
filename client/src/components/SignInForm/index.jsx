@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormContainer, SearchBar, SubmitButton } from 'grass-roots-react';
+import { FormContainer, SubmitButton, Username, Password } from 'grass-roots-react';
 import { colours } from '../../content/index.js';
 
 const { backgroundColor } = colours;
@@ -14,13 +14,13 @@ export default function(){
     return (
         <div style={{maxWidth:'max(300px,50vw)',}}>
             <FormContainer onSubmit={login}>
-                    <SearchBar
+                    <Username
                         name={{display:'Username', id:'username', toDisplay:true}}
                         placeholder=''
                         label={{width:'65px'}}
                         container={{margin:'15px auto'}}
                     />
-                    <SearchBar
+                    <Password
                         name={{display:'Password', id:'password', toDisplay:true}}
                         placeholder=''
                         label={{width:'65px'}}
