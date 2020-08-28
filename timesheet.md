@@ -45,8 +45,9 @@ A rough Estimate for man hours put into this project
 ### 3:38pm stop for phone call
 
 ### 4:00pm start
-* have been reading up about authentication with React, I have little experience in Auth
-* changed input compnents and made created lorem for the body for the post as it only has a title from the API
+* Have been reading up about authentication with React, I have little experience in Auth
+* Changed input compnents for sign-in/sign-up forms.
+* Created lorem for the body for the post as it only has a title from the API
 ### 5:36pm break
 
 ### 5:53pm start
@@ -54,11 +55,12 @@ A rough Estimate for man hours put into this project
 ### 7:03pm stop for dinner
 
 ### 8:31pm start
-* reading up on react redux, starting implementing the store and reducers
+* Reading up on react redux, starting implementing the store and reducers
 ### 9:51pm stop for break;
 
-### 10:33pm start;
-### stop
+### 10:33pm start
+* Understand redux in a react context, now implementing to hook up the states up to the global store
+### 12:30am Stop
 
 
 
