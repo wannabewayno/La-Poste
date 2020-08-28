@@ -4,14 +4,15 @@ import PostList from '../PostList';
 import { asideStyle } from './style';
 import API from '../../utils/API';
 import randomParagraph from '../../utils/randomParagraph';
+import { useSelector, useDispatch } from 'react-redux';
+import { updateAllPosts } from '../../redux/actions';
 
 export default function(){
+    const dispatch = useDispatch();
+    const posts = useSelector(state => state.posts.allPosts);
+    console.log(posts);
 
-    const [posts, setPosts] = useState(
-        {
-            posts:[],
-            userId:0
-        });
+    const [userId, setUserId] = useState(0);
 
     async function loadMore(){
         
@@ -19,7 +20,7 @@ export default function(){
 
         // posts come in groups of 10, grouped by an id
         // increment the id to get a new batch of posts
-        const postGroup = posts.userId + 1
+        const postGroup = userId + 1
 
         // set loading posts to true here
 
@@ -32,13 +33,14 @@ export default function(){
             post.body = randomParagraph();
             return post;
         })
+
+        setUserId(postGroup);
+
         // set loading posts to false here
         console.log(newPosts);
-        // set our state to these posts
-        setPosts({
-            posts:newPosts,
-            userId:postGroup
-        });
+
+        // store our new posts in the global store
+        dispatch(updateAllPosts(newPosts));
         
     }
 
@@ -58,7 +60,7 @@ export default function(){
                 size='small'
                 style={{marginTop:'1em'}}
             />
-            <PostList posts={posts.posts}/>
+            <PostList posts={posts}/>
         </aside>
     )
 }
