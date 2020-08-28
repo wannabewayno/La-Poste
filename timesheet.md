@@ -45,7 +45,12 @@ A rough Estimate for man hours put into this project
 ### 3:38pm stop for phone call
 
 ### 4:00pm start
-### stop
+* have been reading up about authentication with React, I have little experience in Auth
+* changed input compnents and made created lorem for the body for the post as it only has a title from the API
+### 5:36pm break
+
+
+
 
 
 
