@@ -5,13 +5,13 @@ export default function({ posts }){
 
 
     return (
-        <>
-            {posts.map(({ text },index) => (
-                    <div key={index} >
-                        {text}
-                    </div>
+        <ul>
+            {posts.map(({ title },index) => (
+                    <li key={index} >
+                        {title}
+                    </li>
                 )
             )}
-        </>
+        </ul>
     )
 }

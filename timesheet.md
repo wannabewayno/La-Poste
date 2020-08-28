@@ -35,6 +35,13 @@ A rough Estimate for man hours put into this project
 ### 12:22pm stop for lunch and phone call
 
 ### 1:00pm start
+* Add footer component
+* add css to display the Sidebar and Post side by side in flex box.
+### 1:28pm stop for phone call
+
+### 2:03pm Start
+
+### stop for phone call
 
 
 
