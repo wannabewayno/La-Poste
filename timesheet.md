@@ -1,7 +1,7 @@
 # TimeSheet
 A rough Estimate for man hours put into this project
 
-## Friday 27th August
+## Thursday 27th August
 ### 4:00pm start
 * so far, a react app, deployed on heroku <a href="https://la-poste.herokuapp.com/">here</a>, with basic api routing built, controllers built and react router displaying a simple 'this is a dashboard" or "this is a signin page"
 ### 5:03pm stop for coffee break (1hr)
@@ -24,5 +24,8 @@ A rough Estimate for man hours put into this project
 * signin page almost complete, the forms needs hooking up to the routes, and a better colour scheme, colour has not be chosen at this stage
 ### 12:02am stop for bed
 
-
+## Friday 28th August
+### 8:26am start
+* 
+### stop for meeting in the city
 
