@@ -18,11 +18,11 @@ function App() {
             color='beige'
           />
           <Switch>
-            <Route exact path={["/", "/dashboard"]}>
-              <Dashboard/>
+            <Route exact path={["/", "/signin"]}>
+              <Signin/>
             </Route>
             <Route exact path='/signin'>
-              <Signin/>
+              <Dashboard/>
             </Route>
             <Route>
               <NotFound/>
