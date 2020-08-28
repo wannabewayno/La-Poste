@@ -1,7 +1,10 @@
 import React from 'react';
 
-export default function(){
+export default function(post){
     return (
-        <p>post</p>
+        <article>
+            <h3>{post.title}</h3>
+            <p>{post.body}</p>
+        </article>
     )
 }

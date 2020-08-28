@@ -40,8 +40,12 @@ A rough Estimate for man hours put into this project
 ### 1:28pm stop for phone call
 
 ### 2:03pm Start
+* created utilites to hold API related functions. Calls the json endpoint required
+* displays this in the sidebar
+### 3:38pm stop for phone call
 
-### stop for phone call
+### 4:00pm start
+### stop
 
 
 

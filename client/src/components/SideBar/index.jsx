@@ -3,6 +3,7 @@ import { Button } from 'grass-roots-react';
 import PostList from '../PostList';
 import { asideStyle } from './style';
 import API from '../../utils/API';
+import randomParagraph from '../../utils/randomParagraph';
 
 export default function(){
 
@@ -15,15 +16,28 @@ export default function(){
     async function loadMore(){
         // calls an API to get posts
         console.log('loading posts');
-        
-        // set loading posts to true here
-        const newPosts = await API.getPosts();
+
+        // posts come in groups of 10, grouped by an id
+        // increment the id to get a new batch of posts
         const postGroup = posts.userId + 1
+
+        // set loading posts to true here
+        const allPosts = await API.getPosts();
+        let newPosts = allPosts.filter(post => post.userId === postGroup);
+
+        // let's generate a body for the post as the provided enpoint only comes with a title
+        newPosts = newPosts.map(post => {
+            post.body = randomParagraph();
+            return post;
+        })
+        // set loading posts to false here
+    
+        // set our state to these posts
         setPosts({
-            posts:newPosts.filter(post => post.userId === postGroup),
+            posts:newPosts,
             userId:postGroup
         });
-        // set loading posts to false here
+        
     }
 
     useEffect(()=> {
