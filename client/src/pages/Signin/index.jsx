@@ -3,13 +3,8 @@ import SignInForm from '../../components/SignInForm';
 import SignUpForm from '../../components/SignUpForm';
 import Turntable from '../../components/Turntable';
 import { Container, Button } from 'grass-roots-react';
-import { useDispatch } from 'react-redux';
-import { logIn } from '../../redux/actions';
-
 
 export default function Signin(){
-
-    const dispatch = useDispatch()
 
     return (
         <Container>
@@ -18,12 +13,6 @@ export default function Signin(){
                 <SignUpForm/>
                 <p style={{cursor:'pointer', fontSize:'20px', color:'white'}}>or sign up</p>
             </Turntable>
-            <Button
-                color='rgb(255,255,255)'
-                text='Log in'
-                size='large'
-                onClick={() => dispatch(logIn())}
-            />
         </Container> 
     )
 }
