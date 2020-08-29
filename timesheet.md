@@ -97,7 +97,10 @@ A rough Estimate for man hours put into this project
 * updated key colors around the app with palette choices
 ### finish 1:03am
 
-### start
+## Sunday 30th August
+
+### 8:00am start
+
 
 
 
