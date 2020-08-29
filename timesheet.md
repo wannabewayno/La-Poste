@@ -75,8 +75,13 @@ A rough Estimate for man hours put into this project
 ### 1:40pm coffee break
 
 ### 1:48pm back from break
+* built a basic user database with rest methods using json file. I was going to use passport, however a full blown authentication system will be too time consuming. 
+* all data is pretty mush hooked up, need an private and public system and to populate the modal with settings to update a user and change the colour scheme
+### 4:38pm break
 
-### 
+### 4:47pm start
+
+###
 
 
 

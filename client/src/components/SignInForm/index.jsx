@@ -13,7 +13,7 @@ export default function(){
 
     // sends login data to '/api/signin'
     async function login(formData){
-        
+
         const { isAuthenticated, message } = await API.authenticateUser(formData);
         
         switch(isAuthenticated){
@@ -38,6 +38,7 @@ export default function(){
                         container={{margin:'15px auto'}}
                     />
                     <SubmitButton
+                        color='rgb(255,255,255)'
                         text='Sign in'
                         size='medium'
                         style={{margin:'15px auto'}}

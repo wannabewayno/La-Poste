@@ -42,6 +42,7 @@ export default function(){
                         container={{margin:'15px auto'}}
                     />
                     <SubmitButton
+                        color='rgb(255,255,255)'
                         text='Create Account'
                         size='medium'
                         style={{margin:'15px auto'}}

@@ -16,9 +16,10 @@ export default function Signin(){
             <Turntable duration='500ms' style={{maxWidth:'max(320px,40vw)', marginTop:'15vh'}}>
                 <SignInForm/>
                 <SignUpForm/>
-                <p style={{cursor:'pointer'}}>or sign up</p>
+                <p style={{cursor:'pointer', fontSize:'20px', color:'white'}}>or sign up</p>
             </Turntable>
             <Button
+                color='rgb(255,255,255)'
                 text='Log in'
                 size='large'
                 onClick={() => dispatch(logIn())}
