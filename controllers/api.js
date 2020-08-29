@@ -8,8 +8,7 @@ module.exports = {
         
         // get the json database
         const users = JSON.parse(fs.readFileSync(path.resolve('./db/users.json')));
-        console.log(users)
-        
+
         const user = users.find(user => user.username === username);
 
         if(user){ // if user exists check that the password matches

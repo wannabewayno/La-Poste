@@ -80,10 +80,12 @@ A rough Estimate for man hours put into this project
 ### 4:38pm break
 
 ### 4:47pm start
+*  Have been reading up on delivering a Basic auth system with react router. 
+*  The issue I'm having is that the redux store won't keep state when re-directing.
+### 5:20pm break
 
-###
-
-
+### 5:30pm start
+### 
 
 
 

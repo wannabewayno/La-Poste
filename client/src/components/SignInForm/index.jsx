@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormContainer, SubmitButton, Username, Password } from 'grass-roots-react';
+import { useHistory } from 'react-router-dom'
 import API from '../../utils/API';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/actions';
@@ -10,14 +11,15 @@ import { logIn } from '../../redux/actions';
 export default function(){
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
-    // sends login data to '/api/signin'
+   
     async function login(formData){
-
+        // sends login data to '/api/signin' and returns true if authenticated
         const { isAuthenticated, message } = await API.authenticateUser(formData);
         
         switch(isAuthenticated){
-            case true: dispatch(logIn()); break;
+            case true: dispatch(logIn()); history.push('/dashboard'); break;
             case false: console.log(`Error: ${message}`); break; // let the user know with a tool tip or something
         }
     }

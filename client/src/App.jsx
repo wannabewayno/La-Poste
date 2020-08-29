@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect, useRouteMatch } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Switch, Redirect, useHistory } from "react-router-dom";
+import { useLocation } from 'react-router-dom'
 import Dashboard from './pages/Dashboard';
 import Signin from './pages/Signin';
 import NotFound from './pages/NotFound';
@@ -11,13 +12,20 @@ import { useSelector } from 'react-redux';
 
 function App() {
   const isLoggedIn = useSelector(state => state.isLoggedIn);
+  // const [ isAuthenticated, setIsAuthenticaed ] = useState(false);
+
 
   useBackgroundImageRouter(backgroundImageMap);
 
   useEffect(() => {
     console.log('isLoggedIn?:',isLoggedIn);
-    if(isLoggedIn) window.location.pathname='dashboard';
+    if(isLoggedIn);
+    // setIsAuthenticaed(true); 
   },[isLoggedIn])
+
+  // useEffect(() => {
+  //   if(isAuthenticated) window.location = '/dashboard'
+  // },[isAuthenticated])
 
   return (
     <Router>
@@ -29,14 +37,14 @@ function App() {
             <Route exact path={["/", "/signin"]}>
               <Signin/>
             </Route>
-            <PrivateRoute exact path='/dashboard' component={Dashboard}/>
-            {/* <Route exact path='/dashboard'>
+            {/* <PrivateRoute exact path='/dashboard' component={Dashboard} isLoggedIn={isLoggedIn}/> */}
+            <Route exact path='/dashboard'>
               {isLoggedIn? (
-                <Dashboard/>
+                <Dashboard isLoggedIn={isLoggedIn}/>
               ):(
                 <Redirect to='/signin'/>
               )}
-            </Route> */}
+            </Route>
             <Route>
               <NotFound/>
             </Route>

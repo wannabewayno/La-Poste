@@ -7,9 +7,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { logIn } from '../../redux/actions';
 import Modal from '../../components/Modal';
 
-export default function Dashboard(){
-
+export default function({ isLoggedIn }){
     const dispatch = useDispatch()
+    if(isLoggedIn) dispatch(logIn());
 
     const state = useSelector(state => state);
     console.log('Dashboard: STATE',state);
