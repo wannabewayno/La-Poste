@@ -14,7 +14,7 @@ export default function(){
                 <article style={articleStyle}>
                     <h3 style={{...titleStyle, backgroundColor:'rgb(255,125,125)'}}>{currentPost.title}</h3>
                     <FrostedGlass style={{borderTopLeftRadius:'0px', borderTopRightRadius:'0px'}}>
-                        <p style={bodyStyle}>{currentPost.body}</p>
+                        <p style={{...bodyStyle, padding:'0 0.75em'}}>{currentPost.body}</p>
                     </FrostedGlass>
                 </article>
             }
