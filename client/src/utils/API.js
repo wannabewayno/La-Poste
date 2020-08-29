@@ -30,5 +30,17 @@ export default {
             body: JSON.stringify(formData)
         })
         .then(response => response.json())
+    },
+    updateUser(formData){
+        return fetch('/api/user',{
+            headers:{
+                'Content-Type':'application/json',
+                'accept':'application/json',
+            },
+            method:'PATCH',
+            mode:'cors',
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
     }
 }

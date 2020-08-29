@@ -1,6 +1,6 @@
 export const asideStyle = {
     backgroundColor:'rgb(255,255,255)',
-    width:'20vw',
+    width:'25vw',
     display:'flex',
     flexDirection:'column',
     alignItems:'center',
