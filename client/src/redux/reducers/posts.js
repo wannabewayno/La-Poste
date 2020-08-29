@@ -5,10 +5,11 @@ export default function(state = {}, action) {
             const currentPost = state.allPosts.find(post => post.id === postId)
             return {...state, currentPost };
         }
-        case 'updateAllPosts'   : {
+        case 'updatePosts'   : {
             const allPosts = action.payload;
-            return {... state, allPosts }
+            console.log('reducer:',allPosts);
+            return {...state, allPosts };
         };
-        default:  return {...state };
+        default:  return state;
     }
 }

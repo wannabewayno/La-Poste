@@ -5,12 +5,13 @@ import { asideStyle } from './style';
 import API from '../../utils/API';
 import randomParagraph from '../../utils/randomParagraph';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateAllPosts } from '../../redux/actions';
+import { updatePosts } from '../../redux/actions';
 
 export default function(){
     const dispatch = useDispatch();
+
     const posts = useSelector(state => state.posts.allPosts);
-    console.log(posts);
+    console.log('SIDEBAR:',posts);
 
     const [userId, setUserId] = useState(0);
 
@@ -34,13 +35,14 @@ export default function(){
             return post;
         })
 
+        // updates the userId, so we can get a new group of posts when 'load more' is clicked
         setUserId(postGroup);
 
         // set loading posts to false here
         console.log(newPosts);
 
         // store our new posts in the global store
-        dispatch(updateAllPosts(newPosts));
+        dispatch(updatePosts(newPosts));
         
     }
 

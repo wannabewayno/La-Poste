@@ -1,7 +1,8 @@
 
 export const headerStyle = {
     display:'flex',
-    alignItems:'center'
+    alignItems:'center',
+    justifyContent:'space-between'
 }
 
 export const headlineStyle = {

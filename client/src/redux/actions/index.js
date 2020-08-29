@@ -1,21 +1,21 @@
 
-export const updateCurrentPost = ( postId ) => {
+export const updateCurrentPost = postId => {
     return {
         type:'updateCurrentPost',
-        payload:postId,
+        payload: postId,
     }
 }
 
-export const updateAllPosts = ( posts ) => {
+export const updatePosts = newPosts => {
     return {
-        type: 'updateAllPosts',
-        payload: posts,
+        type: 'updatePosts',
+        payload: newPosts,
     }
 }
 
-export const updateColorScheme = ( newColourScheme ) => {
+export const updateColorScheme = newColourScheme => {
     return {
-        type:'updateColorScheme',
+        type:'updateColourScheme',
         payload:newColourScheme,
     }
 }

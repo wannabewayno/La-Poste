@@ -64,8 +64,14 @@ A rough Estimate for man hours put into this project
 
 
 ## Saturday 29th August
-### 10:07 start
-### 
+### 10:07am start
+* add css for viewing an individual post
+* add buttons into the header for logout and settings feature
+### 11:30pm break
+
+### 12:00pm start
+
+###
 
 
 

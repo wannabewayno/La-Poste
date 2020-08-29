@@ -4,11 +4,11 @@ import { useDispatch } from 'react-redux';
 import { onHover } from 'grass-roots-react';
 
 export default function({ posts = [] }){
-
+    console.log('POSTLIST:',posts);
     const dispatch = useDispatch();
 
     // call this when clicking on a title from the sidebar list, updates the current post
-    const clickPost = (postId) => dispatch(updateCurrentPost(postId));
+    const clickPost = postId => dispatch(updateCurrentPost(postId));
 
     const hoverStyle = { color:'rgb(255,125,125)', cursor:'pointer' }
     

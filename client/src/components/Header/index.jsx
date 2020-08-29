@@ -1,5 +1,6 @@
 import React from 'react';
 import { headlineStyle, headerStyle } from './style';
+import MenuButtons from '../MenuButtons';
 
 export default function Header({
     text,
@@ -17,6 +18,7 @@ export default function Header({
             <a style={headlineStyle} href='/'>
                 {text}
             </a>
+            <MenuButtons/>
         </header>
     )
 }

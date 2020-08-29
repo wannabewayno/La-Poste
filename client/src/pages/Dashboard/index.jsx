@@ -8,10 +8,10 @@ import { useSelector } from 'react-redux';
 export default function Dashboard(){
 
     const state = useSelector(state => state);
-    console.log('Dashboard: CurrentPost',state);
+    console.log('Dashboard: STATE',state);
 
     useEffect(() => {
-        console.log('STATE:',state.posts.currentPost);
+        console.log('RERENDER STATE:',state);
     },[state])
 
     return (
@@ -20,7 +20,7 @@ export default function Dashboard(){
             <section style={{display:'flex', height:'100%',}}>
             	<SideBar/>
             	<Container>
-            	    <Post post={state.posts.currentPost}/>
+            	    <Post/>
             	</Container>
             </section>
 
