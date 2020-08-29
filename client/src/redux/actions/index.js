@@ -20,9 +20,9 @@ export const updateColorScheme = newColourScheme => {
     }
 }
 
-export const startFetchingData = () => {
+export const fetchingData = () => {
     return {
-        type: 'startFetchingData',
+        type: 'FetchingData',
     }
 }
 
