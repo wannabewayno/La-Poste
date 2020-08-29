@@ -1,6 +1,7 @@
 import React from 'react';
 import { headlineStyle, headerStyle } from './style';
 import MenuButtons from '../MenuButtons';
+import { useSelector } from 'react-redux';
 
 export default function Header({
     text,
@@ -13,12 +14,16 @@ export default function Header({
 }){
     const headerCSS = { ...headerStyle, color:textColor, height, backgroundColor:color,...style }
 
+    const isLoggedIn = useSelector(state => state.isLoggedIn)
+
     return (
         <header style={headerCSS}>
             <a style={headlineStyle} href='/'>
                 {text}
             </a>
-            <MenuButtons/>
+            {
+                isLoggedIn? <MenuButtons/> : null 
+            }
         </header>
     )
 }

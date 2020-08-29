@@ -38,3 +38,15 @@ export const updateCurrentUser = ( currentUser ) =>{
         payload: currentUser,
     }
 }
+
+export const openModal = () => {
+    return {
+        type:'openModal'
+    }
+}
+
+export const closeModal = () => {
+    return {
+        type:'closeModal'
+    }
+}

@@ -11,7 +11,7 @@ export default function(){
     const dispatch = useDispatch();
 
     const posts = useSelector(state => state.posts.allPosts);
-    console.log('SIDEBAR:',posts);
+
 
     const [userId, setUserId] = useState(0);
 
