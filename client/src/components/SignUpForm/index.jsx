@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormContainer, Username, Password, SubmitButton } from 'grass-roots-react';
+import API from '../../utils/API'
 // import { colours } from '../../content/index.js';
 
 // const { backgroundColor } = colours;
@@ -7,13 +8,18 @@ import { FormContainer, Username, Password, SubmitButton } from 'grass-roots-rea
 export default function(){
 
     // sends login data to '/api/user' to create a new user
-    function login(formData){
+    async function signUp(formData){
         console.log(formData);
+        const { username, password, confirmPassword } = formData;
+
+        if(password === confirmPassword){
+            const response = await API.createUser({username, password});
+        }
     }
 
     return (
         <div >
-            <FormContainer onSubmit={login}>
+            <FormContainer onSubmit={signUp}>
                     <Username
                         name={{display:'Username', id:'username', toDisplay:true}}
                         placeholder=''
@@ -27,7 +33,7 @@ export default function(){
                         container={{margin:'15px auto'}}
                     />
                     <Password
-                        name={{display:'Confirm Password', id:'password', toDisplay:true}}
+                        name={{display:'Confirm Password', id:'confirmPassword', toDisplay:true}}
                         placeholder=''
                         label={{width:'120px'}}
                         container={{margin:'15px auto'}}

@@ -7,11 +7,8 @@ module.exports = {
         const { username, password } = req.body;
         
         // get the json database
-        const db = JSON.parse(fs.readFileSync(path.resolve('./db/users.json')));
-        console.log(db);
-
-        // get users from the database
-        const { users } = db;
+        const users = JSON.parse(fs.readFileSync(path.resolve('./db/users.json')));
+        console.log(users)
         
         const user = users.find(user => user.username === username);
 
@@ -34,11 +31,8 @@ module.exports = {
         
         // get the json database
         const dbPath = path.resolve('./db/users.json');
-        const db = JSON.parse(fs.readFileSync(dbPath));
-        console.log(db);
-
-        // get users from the database
-        const { users } = db;
+        const users = JSON.parse(fs.readFileSync(dbPath));
+        console.log(users)
         
         // create a new entry fot this user
         users.push({
@@ -46,7 +40,7 @@ module.exports = {
             password
         })
 
-        fs.writeFile(dbPath,users,err =>{
+        fs.writeFile(dbPath,JSON.stringify(users,null,4),err =>{
             if(err) res.status(422).json(new Error('error adding user to database'));
             res.status(200).json({message:'Success! User added to db'})
         });
