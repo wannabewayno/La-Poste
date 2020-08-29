@@ -93,8 +93,11 @@ A rough Estimate for man hours put into this project
 
 ### 9:00 start
 * playing with external npm package for a UI component update
-* 
-### break
+* choose color palette for theme picker
+* updated key colors around the app with palette choices
+### finish 1:03am
+
+### start
 
 
 
