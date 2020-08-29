@@ -13,21 +13,20 @@ export default function() {
 
     // get the state of the modal
     const modal = useSelector(state => state.modal);
-    console.log('MODAL STATE:', modal);
 
     return (
         <>{ 
-            modal==='OPEN'?
+            modal==='OPEN'? // if modal shoudl be open, render the modal
             <div 
                 style={modalContainer}
-                onClick={() => dispatch(closeModal())}
+                onClick={() => dispatch(closeModal())} // click outside the modal to also close it
             >
                 <div style={modalBody}>
-                    <p>I am a modal bruh</p>
+                    <p>I am a modal</p>
                     <CloseButton/>
                 </div>
             </div>
-            : null
+            : null // if modal should be closed, render nothing
         }</>
     )
 }

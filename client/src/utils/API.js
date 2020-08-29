@@ -6,4 +6,18 @@ export default {
         .then(data => data)
         .catch(error => console.log(error))
     },
+    authenticateUser(formData){
+        return fetch('/api/signin',{
+            headers:{
+                'Content-Type':'application/json',
+                'accept':'application/json',
+            },
+            method:'POST',
+            mode:'cors',
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => data)
+        .catch(error => error.response)
+    }
 }

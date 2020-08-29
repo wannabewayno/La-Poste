@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormContainer, SubmitButton, Username, Password } from 'grass-roots-react';
+import API from '../../utils/API';
 // import { colours } from '../../content/index.js';
 
 // const { backgroundColor } = colours;
@@ -7,8 +8,10 @@ import { FormContainer, SubmitButton, Username, Password } from 'grass-roots-rea
 export default function(){
 
     // sends login data to '/api/signin'
-    function login(formData){
+    async function login(formData){
         console.log(formData);
+        const authenticated = await API.authenticateUser(formData);
+        console.log(authenticated);
     }
 
     return (
