@@ -17,7 +17,6 @@ export default {
             body: JSON.stringify(formData)
         })
         .then(response => response.json())
-        .then(data => data)
         .catch(error => error)
     },
     createUser(formData){
@@ -31,7 +30,5 @@ export default {
             body: JSON.stringify(formData)
         })
         .then(response => response.json())
-        .then(data => data)
-        .catch(error => error)
     }
 }

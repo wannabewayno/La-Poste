@@ -9,11 +9,14 @@ export default function(){
 
     // sends login data to '/api/user' to create a new user
     async function signUp(formData){
-        console.log(formData);
         const { username, password, confirmPassword } = formData;
 
         if(password === confirmPassword){
             const response = await API.createUser({username, password});
+            // clear the form, on success
+            // on error leave it as is
+        } else {
+
         }
     }
 

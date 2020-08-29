@@ -14,12 +14,12 @@ module.exports = {
 
         if(user){ // if user exists check that the password matches
             if(user.password === password) {
-                res.status(200).json({message:'authenticated'}) // authenticated
+                res.status(200).json({isAuthenticated:true}) // authenticated
             } else {
-                res.status(503).json(new Error('Incorrect Password'))
+                res.status(503).json({isAuthenticated:false, message:'Incorrect Password'}) // 503 error, not allowed
             }
-        } else { // else send back 503 error
-            res.status(404).json(new Error('Username not found'));
+        } else { 
+            res.status(404).json({isAuthenticated:false, message:'Username not found'}); 
         }
     },
     getUserByID(req,res){
@@ -32,7 +32,6 @@ module.exports = {
         // get the json database
         const dbPath = path.resolve('./db/users.json');
         const users = JSON.parse(fs.readFileSync(dbPath));
-        console.log(users)
         
         // create a new entry fot this user
         users.push({

@@ -7,7 +7,6 @@ export default function(state = {}, action) {
         }
         case 'updatePosts'   : {
             const allPosts = action.payload;
-            console.log('reducer:',allPosts);
             return {...state, allPosts };
         };
         default:  return state;
