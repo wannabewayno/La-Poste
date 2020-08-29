@@ -18,6 +18,20 @@ export default {
         })
         .then(response => response.json())
         .then(data => data)
-        .catch(error => error.response)
+        .catch(error => error)
+    },
+    createUser(formData){
+        return fetch('/api/user',{
+            headers:{
+                'Content-Type':'application/json',
+                'accept':'application/json',
+            },
+            method:'POST',
+            mode:'cors',
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => data)
+        .catch(error => error)
     }
 }
