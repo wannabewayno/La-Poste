@@ -1,8 +1,8 @@
 import React from 'react';
 import { FormContainer, Username, Password, SubmitButton } from 'grass-roots-react';
-import { colours } from '../../content/index.js';
+// import { colours } from '../../content/index.js';
 
-const { backgroundColor } = colours;
+// const { backgroundColor } = colours;
 
 export default function(){
 

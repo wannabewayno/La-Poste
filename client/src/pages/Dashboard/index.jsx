@@ -2,10 +2,14 @@ import React, { useEffect } from 'react';
 import SideBar from '../../components/SideBar';
 import Footer from '../../components/Footer';
 import Post from '../../components/Post';
-import { Container } from 'grass-roots-react';
-import { useSelector } from 'react-redux';
+import { Container, Button } from 'grass-roots-react';
+import { useSelector, useDispatch } from 'react-redux';
+import { logIn } from '../../redux/actions';
+import Modal from '../../components/Modal';
 
 export default function Dashboard(){
+
+    const dispatch = useDispatch()
 
     const state = useSelector(state => state);
     console.log('Dashboard: STATE',state);
@@ -21,9 +25,14 @@ export default function Dashboard(){
             	<SideBar/>
             	<Container>
             	    <Post/>
+                    <Button
+                        text='Log in'
+                        size='large'
+                        onClick={() => dispatch(logIn())}
+                    />
             	</Container>
             </section>
-
+            <Modal/>
             <Footer/>
         </main>
     )

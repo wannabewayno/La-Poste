@@ -1,5 +1,4 @@
-import React, { useState, useRef, cloneElement } from 'react';
-import { useEffect } from 'react';
+import React, { useRef, cloneElement } from 'react';
 
 export default function({ children, duration='500ms', style={} }){
 

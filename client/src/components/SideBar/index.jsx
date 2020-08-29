@@ -5,7 +5,7 @@ import { asideStyle } from './style';
 import API from '../../utils/API';
 import randomParagraph from '../../utils/randomParagraph';
 import { useSelector, useDispatch } from 'react-redux';
-import { updatePosts } from '../../redux/actions';
+import { updatePosts, startFetchingPosts, stopFetchingPosts } from '../../redux/actions';
 
 export default function(){
     const dispatch = useDispatch();
@@ -15,6 +15,7 @@ export default function(){
 
     const [userId, setUserId] = useState(0);
 
+    // loads 10 more posts when 'Load more' is clicked
     async function loadMore(){
         
         console.log('loading posts');
@@ -23,7 +24,8 @@ export default function(){
         // increment the id to get a new batch of posts
         const postGroup = userId + 1
 
-        // set loading posts to true here
+        // set isFetchingPosts to true
+        dispatch(startFetchingPosts())
 
         // calls an API to get posts
         const allPosts = await API.getPosts();
@@ -38,8 +40,8 @@ export default function(){
         // updates the userId, so we can get a new group of posts when 'load more' is clicked
         setUserId(postGroup);
 
-        // set loading posts to false here
-        console.log(newPosts);
+        // set isFetchingPosts to false
+        dispatch(stopFetchingPosts())
 
         // store our new posts in the global store
         dispatch(updatePosts(newPosts));
