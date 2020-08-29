@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './node_modules/react';
 import useWindowSize from '../../hooks/useWindowSize';
 import Hamburger from './Hamburger'
 
