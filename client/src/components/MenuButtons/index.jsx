@@ -3,7 +3,7 @@ import { Button } from 'grass-roots-react';
 import { containerStyle } from './style';
 import Hamburger from '../Hamburger';
 import { useDispatch } from 'react-redux';
-import { openModal } from '../../redux/actions';
+import { openModal, logOut } from '../../redux/actions';
 
 
 export default function(){
@@ -21,6 +21,7 @@ export default function(){
                     text="Logout"
                     skin="flat"
                     size='small'
+                    onClick={() => dispatch(logOut())}
                 />
                 <Button
                     text="Settings"
