@@ -10,8 +10,9 @@ export default function(){
     // sends login data to '/api/user' to create a new user
     async function signUp(formData){
         const { username, password, confirmPassword } = formData;
-
-        if(password === confirmPassword){
+        
+        // check that username is more than 4 characters
+        if(password === confirmPassword && username.length >= 4 ){
             const response = await API.createUser({username, password});
             // clear the form, on success
             // on error leave it as is
