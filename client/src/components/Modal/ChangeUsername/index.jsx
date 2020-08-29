@@ -7,7 +7,7 @@ import API from '../../../utils/API';
 export default function(){
     //get our global states and dispatch
     const dispatch = useDispatch();
-    const username = useSelector(state => state.username);
+    const { username, color:{ accent, dark } } = useSelector(state => state);
 
     async function updateUser({newUsername, newPassword, confirmPassword}) {
 
@@ -52,12 +52,14 @@ export default function(){
                     placeholder='new username...'
                     label={{width:'65px'}}
                     container={{margin:'0px auto'}}
+                    color={dark}
                 />
                 <SubmitButton
                     text='update'
                     color='black'
                     size='small'
                     style={{margin:'0px'}}
+                    color={accent}
                 />
             </InlineContainer>
         </FormContainer>

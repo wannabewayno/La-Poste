@@ -1,11 +1,12 @@
 import React from 'react';
 import { FormContainer, Username, Password, SubmitButton } from 'grass-roots-react';
 import API from '../../utils/API'
-// import { colours } from '../../content/index.js';
-
-// const { backgroundColor } = colours;
+import { useSelector } from 'react-redux';
 
 export default function(){
+
+    // color theme
+    const { neutral, accent } = useSelector(state => state.color);
 
     // sends login data to '/api/user' to create a new user
     async function signUp(formData){
@@ -29,24 +30,29 @@ export default function(){
                         placeholder=''
                         label={{width:'65px'}}
                         container={{margin:'15px auto'}}
+                        color={neutral}
                     />
                     <Password
                         name={{display:'Password', id:'password', toDisplay:true}}
                         placeholder=''
                         label={{width:'65px'}}
                         container={{margin:'15px auto'}}
+                        color={neutral}
                     />
                     <Password
                         name={{display:'Confirm Password', id:'confirmPassword', toDisplay:true}}
                         placeholder=''
                         label={{width:'120px'}}
                         container={{margin:'15px auto'}}
+                        color={neutral}
                     />
                     <SubmitButton
                         color='rgb(255,255,255)'
                         text='Create Account'
                         size='medium'
+                        skin='flat'
                         style={{margin:'15px auto'}}
+                        color={accent}
                     />
             </FormContainer>
         </div>

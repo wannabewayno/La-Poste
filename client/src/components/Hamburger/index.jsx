@@ -5,7 +5,7 @@ import HamburgerIcon from './HamburgerIcon'
 // this wraps content
 // if the window width is less than the breakpoint specified
 // either displays the original content, or a hamburger menu with a dropdown.
-export default function({ breakpoint, children, style }){
+export default function({ breakpoint, children, style, color }){
 
     // get window width to compare againt the set breakpoint
     const { width } = useWindowSize();
@@ -13,7 +13,7 @@ export default function({ breakpoint, children, style }){
     return (
         <>
         {
-            width < breakpoint ? <HamburgerIcon style={style}/> : children
+            width < breakpoint ? <HamburgerIcon style={style} color={color}/> : children
         }
         </>
     )

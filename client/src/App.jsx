@@ -9,13 +9,14 @@ import { useSelector } from 'react-redux';
 
 function App() {
 
-  const isLoggedIn = useSelector(state => state.isLoggedIn);
+  const { isLoggedIn, color:{ main, dark } } = useSelector(state => state)
 
   return (
     <Router>
           <Header
             text='La Poste'
-            color='beige'
+            color={main}
+            textColor={dark}
           />
           <Switch>
             <Route exact path={["/", "/signin"]}>

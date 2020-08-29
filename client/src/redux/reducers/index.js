@@ -4,6 +4,7 @@ import modal from './modal';
 import isLoggedIn from './isLoggedIn';
 import isFetchingPosts from './isFetchingPosts';
 import username from './username';
+import color from './color';
 
 export default combineReducers({
     posts,
@@ -11,4 +12,5 @@ export default combineReducers({
     isLoggedIn,
     isFetchingPosts,
     username,
+    color,
 })

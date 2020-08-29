@@ -10,7 +10,7 @@ export default function({ posts = [] }){
     // call this when clicking on a title from the sidebar list, updates the current post
     const clickPost = postId => dispatch(updateCurrentPost(postId));
 
-    const hoverStyle = { color:'rgb(255,125,125)', cursor:'pointer' }
+    const hoverStyle = { textDecoration:'underline', cursor:'pointer' }
     
     return (
         <ul>

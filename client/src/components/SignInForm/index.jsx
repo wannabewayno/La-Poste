@@ -2,15 +2,15 @@ import React from 'react';
 import { FormContainer, SubmitButton, Username, Password } from 'grass-roots-react';
 import { useHistory } from 'react-router-dom'
 import API from '../../utils/API';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { logIn, updateCurrentUser } from '../../redux/actions';
-// import { colours } from '../../content/index.js';
-
-// const { backgroundColor } = colours;
 
 export default function(){
 
     const dispatch = useDispatch();
+    const { neutral, accent } = useSelector(state => state.color);
+
+    // need history for react-routing
     const history = useHistory();
    
     async function login(formData){
@@ -36,18 +36,22 @@ export default function(){
                         placeholder=''
                         label={{width:'65px'}}
                         container={{margin:'15px auto'}}
+                        color={neutral}
                     />
                     <Password
                         name={{display:'Password', id:'password', toDisplay:true}}
                         placeholder=''
                         label={{width:'65px'}}
                         container={{margin:'15px auto'}}
+                        color={neutral}
                     />
                     <SubmitButton
                         color='rgb(255,255,255)'
                         text='Sign in'
                         size='medium'
+                        skin='flat'
                         style={{margin:'15px auto'}}
+                        color={accent}
                     />
             </FormContainer>
         </div>

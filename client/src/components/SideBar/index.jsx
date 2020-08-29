@@ -10,7 +10,7 @@ import { updatePosts, startFetchingPosts, stopFetchingPosts } from '../../redux/
 export default function(){
     const dispatch = useDispatch();
 
-    const posts = useSelector(state => state.posts.allPosts);
+    const { posts:{ allPosts }, color:{ neutral, accent } } = useSelector(state => state);
 
 
     const [userId, setUserId] = useState(0);
@@ -56,15 +56,16 @@ export default function(){
 
     return (
         // container to hold the Post titles
-        <aside style={asideStyle}>
+        <aside style={{...asideStyle, backgroundColor:neutral}}>
             <Button
                 text='Load more'
                 color='black'
                 onClick={loadMore}
                 size='small'
                 style={{marginTop:'1em'}}
+                color={accent}
             />
-            <PostList posts={posts}/>
+            <PostList posts={allPosts}/>
         </aside>
     )
 }

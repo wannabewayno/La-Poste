@@ -8,7 +8,7 @@ export default function(){
 
     //get our global states and dispatch
     const dispatch = useDispatch();
-    const username = useSelector(state => state.username);
+    const { username, color:{ accent, dark } } = useSelector(state => state);
 
     async function updateUser({newUsername, newPassword, confirmPassword}) {
 
@@ -55,6 +55,7 @@ export default function(){
                     placeholder='new password...'
                     label={{width:'65px'}}
                     container={{margin:'0 auto'}}
+                    color={dark}
                 />
                 <Password
                     color='black'
@@ -62,12 +63,14 @@ export default function(){
                     placeholder='confirm it...'
                     label={{width:'65px'}}
                     container={{margin:'0 auto'}}
+                    color={dark}
                 />
                 <SubmitButton
                     text='update'
                     color='black'
                     size='small'
                     style={{margin:'0'}}
+                    color={accent}
                 />
             </InlineContainer>
         </FormContainer>
