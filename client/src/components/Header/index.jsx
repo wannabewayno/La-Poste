@@ -15,6 +15,7 @@ export default function Header({
     const headerCSS = { ...headerStyle, color:textColor, height, backgroundColor:color,...style }
 
     const isLoggedIn = useSelector(state => state.isLoggedIn)
+    console.log(isLoggedIn);
 
     return (
         <header style={headerCSS}>

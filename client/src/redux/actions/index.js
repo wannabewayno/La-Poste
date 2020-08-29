@@ -50,3 +50,15 @@ export const closeModal = () => {
         type:'closeModal'
     }
 }
+
+export const logIn = () => {
+    return {
+        type:'logIn'
+    }
+}
+
+export const logOut = () => {
+    return {
+        type:'logOut'
+    }
+}
