@@ -2,21 +2,14 @@ import React, { useEffect } from 'react';
 import SideBar from '../../components/SideBar';
 import Footer from '../../components/Footer';
 import Post from '../../components/Post';
-import { Container, Button } from 'grass-roots-react';
-import { useSelector, useDispatch } from 'react-redux';
-import { logIn } from '../../redux/actions';
+import { Container } from 'grass-roots-react';
 import Modal from '../../components/Modal';
+import { useBackgroundImageRouter } from 'grass-roots-react';
+import { backgroundImageMap } from '../../content'
 
-export default function({ isLoggedIn }){
-    const dispatch = useDispatch()
-    if(isLoggedIn) dispatch(logIn());
-
-    const state = useSelector(state => state);
-    console.log('Dashboard: STATE',state);
-
-    useEffect(() => {
-        console.log('RERENDER STATE:',state);
-    },[state])
+export default function(){
+    // conditionally renders a background image to the body based on the current window location
+    useBackgroundImageRouter(backgroundImageMap);
 
     return (
         <main style={{height:'85vh'}}>
@@ -25,11 +18,6 @@ export default function({ isLoggedIn }){
             	<SideBar/>
             	<Container>
             	    <Post/>
-                    <Button
-                        text='Log in'
-                        size='large'
-                        onClick={() => dispatch(logIn())}
-                    />
             	</Container>
             </section>
             <Modal/>

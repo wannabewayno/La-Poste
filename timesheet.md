@@ -85,6 +85,10 @@ A rough Estimate for man hours put into this project
 ### 5:20pm break
 
 ### 5:30pm start
+* Right, history.push() was the magic answer
+### 6:38pm break
+
+### 6:46pm start
 ### 
 
 

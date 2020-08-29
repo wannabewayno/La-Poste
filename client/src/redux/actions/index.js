@@ -32,10 +32,10 @@ export const stopFetchingPosts = () =>{
     }
 }
 
-export const updateCurrentUser = ( currentUser ) =>{
+export const updateCurrentUser = ( username ) =>{
     return {
         type: 'updateCurrentUser',
-        payload: currentUser,
+        payload: username,
     }
 }
 

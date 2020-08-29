@@ -13,7 +13,7 @@ module.exports = {
 
         if(user){ // if user exists check that the password matches
             if(user.password === password) {
-                res.status(200).json({isAuthenticated:true}) // authenticated
+                res.status(200).json({isAuthenticated:true, username, message:'Authenticated'}) // authenticated
             } else {
                 res.status(503).json({isAuthenticated:false, message:'Incorrect Password'}) // 503 error, not allowed
             }
