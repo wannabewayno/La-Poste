@@ -1,6 +1,6 @@
-import React from './node_modules/react';
+import React from 'react';
 import { containerStyle, hamburgerStyle } from './style';
-import { onHover, onActive } from './node_modules/grass-roots-react'
+import { onHover, onActive } from 'grass-roots-react'
 
 // this is the actual hamburger menu
 export default function({ color, style }){

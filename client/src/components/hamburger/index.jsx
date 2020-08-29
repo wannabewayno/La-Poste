@@ -1,6 +1,6 @@
-import React from './node_modules/react';
+import React from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
-import Hamburger from './Hamburger'
+import HamburgerIcon from './HamburgerIcon'
 
 // this wraps content
 // if the window width is less than the breakpoint specified
@@ -13,7 +13,7 @@ export default function({ breakpoint, children, style }){
     return (
         <>
         {
-            width < breakpoint ? <Hamburger style={style}/> : children
+            width < breakpoint ? <HamburgerIcon style={style}/> : children
         }
         </>
     )

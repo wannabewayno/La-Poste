@@ -30,26 +30,26 @@ module.exports = {
     },
     createUser(req,res){
         // get username and password from front-end
-        const { username, password, confirmPassword } = req.body;
+        const { username, password } = req.body;
         
         // get the json database
-        const db = JSON.parse(fs.readFileSync(path.resolve('./db/users.json')));
+        const dbPath = path.resolve('./db/users.json');
+        const db = JSON.parse(fs.readFileSync(dbPath));
         console.log(db);
 
         // get users from the database
         const { users } = db;
         
-        const user = users.find(user => user.username === username);
+        // create a new entry fot this user
+        users.push({
+            username,
+            password
+        })
 
-        if(user){ // if user exists check that the password matches
-            if(user.password === password) {
-                res.status(200).json({message:'authenticated'}) // authenticated
-            } else {
-                res.status(503).json(new Error('Incorrect Password'))
-            }
-        } else { // else send back 503 error
-            res.status(404).json(new Error('Username not found'));
-        }
+        fs.writeFile(dbPath,users,err =>{
+            if(err) res.status(422).json(new Error('error adding user to database'));
+            res.status(200).json({message:'Success! User added to db'})
+        });
     },
     updateUser(req,res){
         // your code here
