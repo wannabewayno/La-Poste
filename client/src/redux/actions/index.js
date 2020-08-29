@@ -20,15 +20,15 @@ export const updateColorScheme = newColourScheme => {
     }
 }
 
-export const fetchingData = () => {
+export const startFetchingPosts = () => {
     return {
-        type: 'FetchingData',
+        type: 'startFetchingPosts',
     }
 }
 
-export const stopFetchingData = () =>{
+export const stopFetchingPosts = () =>{
     return {
-        type: 'stopFetchingData',
+        type: 'stopFetchingPosts',
     }
 }
 

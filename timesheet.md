@@ -70,8 +70,13 @@ A rough Estimate for man hours put into this project
 ### 11:30pm break
 
 ### 12:00pm start
-* 
-###
+* created hamburger menu that replaces login and setting buttons under 576px
+* created actions and reducers for opening settings modal and logging in and out of the app (on the front end)
+### 1:40pm coffee break
+
+### 1:48pm back from break
+
+### 
 
 
 

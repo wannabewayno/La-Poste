@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from 'grass-roots-react';
 import { containerStyle } from './style';
 import Hamburger from '../Hamburger';
