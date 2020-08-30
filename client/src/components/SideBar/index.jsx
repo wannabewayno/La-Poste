@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'grass-roots-react';
 import PostList from '../PostList';
-import { asideStyle } from './style';
+import { asideStyle, mobileAsideStyle } from './style';
 import API from '../../utils/API';
 import randomParagraph from '../../utils/randomParagraph';
 import { useSelector, useDispatch } from 'react-redux';
@@ -12,7 +12,10 @@ export default function(){
 
     const { posts:{ allPosts }, color:{ neutral, accent } } = useSelector(state => state);
 
-
+    // this keeps track of userId a poorly named convention from jsonplaceholder. 
+    // posts are grouped by userId from the API endpoint
+    // loading another 10 posts is simply filtering all posts by this userId
+    // we increment this for a new batch of posts everytime load more runs
     const [userId, setUserId] = useState(0);
 
     // loads 10 more posts when 'Load more' is clicked

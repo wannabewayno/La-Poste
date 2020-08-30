@@ -8,3 +8,10 @@ export const asideStyle = {
     padding:'0 1em',
     overflowY:'auto'
 }
+
+export const mobileAsideStyle = {
+    width:'90vw',
+    height:'fit-content',
+    padding:'1em',
+    overflowY:'auto'
+}
