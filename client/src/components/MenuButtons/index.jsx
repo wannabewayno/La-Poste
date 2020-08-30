@@ -14,7 +14,6 @@ export default function(){
         <div style={containerStyle}>
             <Hamburger
                 breakpoint={576}
-                menuItems={['Logout','Settings']}
                 style={{marginRight:'1em'}}
                 color={accent}
             >

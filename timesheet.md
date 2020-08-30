@@ -103,8 +103,15 @@ A rough Estimate for man hours put into this project
 ### 9:30am break
 
 ### 9:36am start
+* made the sidebar Mobile responsive
+* changed the width of the Post element to full width of it's container on Mobile
+### 11:00am break
+
+### 11:11am start
 
 ###
+
+
 
 
 

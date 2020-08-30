@@ -14,7 +14,6 @@ export const mobileAsideStyle = {
     height:'fit-content',
     padding:'0 1em',
     overflowY:'none',
-    transition:'all 1000ms ease-in-out'
 }
 
 export const dropdownButtonStyle = {
