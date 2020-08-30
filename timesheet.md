@@ -98,8 +98,11 @@ A rough Estimate for man hours put into this project
 ### finish 1:03am
 
 ## Sunday 30th August
-
 ### 8:00am start
+* built ThemePicker, allows user to choose a colour palette for the site from a list of defined palettes
+### 9:30am break
+
+
 
 
 
