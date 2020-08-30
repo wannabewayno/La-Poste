@@ -12,6 +12,17 @@ export const asideStyle = {
 export const mobileAsideStyle = {
     width:'90vw',
     height:'fit-content',
-    padding:'1em',
-    overflowY:'auto'
+    padding:'0 1em',
+    overflowY:'none',
+    transition:'all 1000ms ease-in-out'
+}
+
+export const dropdownButtonStyle = {
+    margin:'0',
+    width:'100vw',
+    border:'none',
+    height:'auto',
+    fontSize:'20px',
+    padding:'0.5em',
+    marginBottom:'1em',
 }

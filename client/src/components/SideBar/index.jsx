@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from 'grass-roots-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Button, useWindowSize, Color } from 'grass-roots-react';
 import PostList from '../PostList';
-import { asideStyle, mobileAsideStyle } from './style';
+import { asideStyle, mobileAsideStyle, dropdownButtonStyle } from './style';
 import API from '../../utils/API';
 import randomParagraph from '../../utils/randomParagraph';
 import { useSelector, useDispatch } from 'react-redux';
 import { updatePosts, startFetchingPosts, stopFetchingPosts } from '../../redux/actions';
+import color from '../../redux/reducers/color';
 
 export default function(){
     const dispatch = useDispatch();
@@ -51,24 +52,64 @@ export default function(){
         
     }
 
+    function toggleDropdown(){
+        switch(sidebar.current.dataset.state){
+            case'OPEN':{
+                sidebar.current.style.height= '0px';
+                sidebar.current.dataset.state = 'CLOSED'
+                break;
+            }
+            case'CLOSED':{
+                sidebar.current.style.height= 'fit-content';
+                sidebar.current.dataset.state = 'OPEN'
+                break;
+            }
+        }
+    }
+
     // loads initial posts on page load
     useEffect(()=> {
         loadMore();
     },[])
 
+    // reference for breakpoint for mobile.
+    const { width } = useWindowSize();
+
+    // ref for sidebar to update in the dom
+    const sidebar = useRef();
 
     return (
-        // container to hold the Post titles
-        <aside style={{...asideStyle, backgroundColor:neutral}}>
-            <Button
-                text='Load more'
-                color='black'
-                onClick={loadMore}
-                size='small'
-                style={{marginTop:'1em'}}
-                color={accent}
-            />
-            <PostList posts={allPosts}/>
-        </aside>
+        <>
+            {/* container to hold the Post titles */}
+            <aside
+                data-state='OPEN'
+                style={{
+                ...asideStyle,
+                backgroundColor:neutral,
+                ...(width<576? mobileAsideStyle:'')
+                }}
+                ref={sidebar}
+            >
+                    <Button
+                        text='Load more'
+                        color='black'
+                        onClick={loadMore}
+                        size='small'
+                        style={{marginTop:'1em'}}
+                        color={accent}
+                    />
+                    <PostList posts={allPosts}/>
+            </aside>
+            {/* this button on shows up on mobile devices, only reveals the aside when pressed */}
+            {width < 576 
+                ? <button
+                    style={{...dropdownButtonStyle,backgroundColor:accent,color: new Color(accent).getContrast()}}
+                    onClick={toggleDropdown}
+                >
+                    Posts
+                </button>
+                : null
+            }
+        </>
     )
 }

@@ -2,7 +2,7 @@
 export const headerStyle = {
     display:'flex',
     alignItems:'center',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
 }
 
 export const headlineStyle = {
