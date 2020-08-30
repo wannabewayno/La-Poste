@@ -6,7 +6,8 @@ import { modalContainer, modalBody } from './style';
 import CloseButton from './CloseButton';
 import ChangeUsername from './ChangeUsername';
 import ChangePassword from './ChangePassword';
-import SelectTheme from './SelectTheme'
+import ThemePicker from './ThemePicker'
+import { palettes } from '../../content';
 
 
 export default function() {
@@ -15,11 +16,14 @@ export default function() {
     const dispatch = useDispatch();
 
     // get username, colour and modal global states
-    const { username, color:{ dark, neutral }, modal } = useSelector(state => state);
+    const { username, color:{ dark, neutral, name }, modal } = useSelector(state => state);
 
     const handleCloseModal= event => {
         if(event.target.className === 'modalContainer') dispatch(closeModal());
     }
+
+    // turn colour palettes into an array of colour palettes for ThemePicker
+    const paletteArray = Object.values(palettes);
 
     return (
         <>{ 
@@ -33,7 +37,11 @@ export default function() {
                     <h3>Hey There <span>{username}</span></h3>
                     <ChangeUsername/>
                     <ChangePassword/>
-                    <SelectTheme/>
+                    <ThemePicker
+                        palettes={paletteArray}
+                        currentTheme={name}
+                        style={{marginTop:'20px'}}
+                    />
                     <CloseButton/>
                 </div>
             </div>

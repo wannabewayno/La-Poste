@@ -9,6 +9,7 @@ export const backgroundImageMap = {
 
 export const palettes = {
     driftwood:{
+        name:'driftwood',
         main:'rgb(156,147,114)',
         accent:'rgb(85,106,123)',
         neutral:'rgb(208,208,207)',
@@ -16,13 +17,15 @@ export const palettes = {
         wildCard:'rgb(66,55,54)'
     },
     laFrance:{
+        name:'laFrance',
         main:'rgb(230,57,70)',
-        accent:'rgb(203,39,44)',
+        accent:'rgb(69,123,157)',
         neutral:'rgb(241,250,238)',
         dark:'rgb(29,53,98)',
         wildCard:'rgb(168,218,220)'
     },
     enzyme:{
+        name:'enzyme',
         main:'rgb(127,198,164)',
         accent:'rgb(250,243,62)',
         neutral:'rgb(93,115,126)',
@@ -30,6 +33,7 @@ export const palettes = {
         wildCard:'rgb(214,248,214)'
     },
     candy:{
+        name:'candy',
         main:'rgb(172,172,222)',
         accent:'rgb(184,51,106)',
         neutral:'rgb(229,252,255)',
@@ -37,8 +41,9 @@ export const palettes = {
         wildCard:'rgb(171,218,252)',
     },
     pastel:{
+        name:'pastel',
         main:'rgb(244,152,156)',
-        accent:'rgb(172,236,247)',
+        accent:'hsl(189,82%,60%)',
         neutral:'rgb(214,246,221)',
         dark:'rgb(204,140,62)',
         wildCard:'rgb(218,196,247)',

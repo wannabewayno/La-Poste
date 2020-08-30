@@ -15,7 +15,7 @@ export const updatePosts = newPosts => {
 
 export const updateColorScheme = newColourScheme => {
     return {
-        type:'updateColourScheme',
+        type:'updateColorScheme',
         payload:newColourScheme,
     }
 }

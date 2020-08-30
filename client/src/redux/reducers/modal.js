@@ -1,4 +1,4 @@
-export default function(state = 'CLOSED', action ) {
+export default function(state = 'OPEN', action ) {
     switch(action.type){
         case'closeModal':{
             return 'CLOSED'
