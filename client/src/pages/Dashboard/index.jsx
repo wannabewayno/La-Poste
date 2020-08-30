@@ -17,9 +17,11 @@ export default function(){
     const { width } = useWindowSize();
 
     return (
-        <main style={{
-            height:(width<576)?'100%':'85vh',
-        }}>
+        <main 
+            style={{
+                height:(width<576)?'100%':'85vh',
+            }}
+        >
 
             <section style={{
                 display:'flex',
