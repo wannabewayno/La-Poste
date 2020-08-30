@@ -47,7 +47,6 @@ export default function(){
                 proportions={[80, 20]}
             >
                 <Username
-                    color='black'
                     name={{display:'Username', id:'newUsername', toDisplay:true}}
                     placeholder='new username...'
                     label={{width:'65px'}}
@@ -56,7 +55,6 @@ export default function(){
                 />
                 <SubmitButton
                     text='update'
-                    color='black'
                     size='small'
                     style={{margin:'0px'}}
                     color={accent}

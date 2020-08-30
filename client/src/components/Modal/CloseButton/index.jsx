@@ -15,7 +15,7 @@ export default function () {
             {...onActive({transform:'scale(0.95)'})}
             onClick={() => dispatch(closeModal())}
         >
-            <img src={closeIcon} style={imageStyle}/>
+            <img src={closeIcon} style={imageStyle} alt='close icon'/>
         </button>
     )
 }

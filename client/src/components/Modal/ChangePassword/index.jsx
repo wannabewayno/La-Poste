@@ -50,7 +50,6 @@ export default function(){
                 proportions={[40,40,20]}
             >
                 <Password
-                    color='black'
                     name={{display:'Password', id:'newPassword', toDisplay:true}}
                     placeholder='new password...'
                     label={{width:'65px'}}
@@ -58,7 +57,6 @@ export default function(){
                     color={dark}
                 />
                 <Password
-                    color='black'
                     name={{display:'Confirm', id:'confirmPassword', toDisplay:true}}
                     placeholder='confirm it...'
                     label={{width:'65px'}}
@@ -67,7 +65,6 @@ export default function(){
                 />
                 <SubmitButton
                     text='update'
-                    color='black'
                     size='small'
                     style={{margin:'0'}}
                     color={accent}

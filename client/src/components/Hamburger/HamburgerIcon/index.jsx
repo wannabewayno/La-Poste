@@ -8,26 +8,24 @@ import { openDropdown, closeDropdown } from '../../../redux/actions'
 export default function({ color, style, menuItems }){
 
     const { color:{neutral}, dropdown } = useSelector(state => state);
-
     const dispatch = useDispatch();
     
     const hamburgerRef = useRef(); // create a ref to the hamburger to update it in the DOM
 
-    function toggleDropdown(event){
+    function toggleDropdown(){
 
         switch(dropdown){
             case 'CLOSED':{
-                console.log('OPEN');
                 dispatch(openDropdown())
                 hamburgerRef.current.ariaExpanded = true;
                 break;
             }
             case 'OPEN':{
-                console.log('CLOSED');
                 dispatch(closeDropdown())
                 hamburgerRef.current.ariaExpanded = false;
                 break;
             }
+            default:
         }
     }
 
@@ -37,7 +35,6 @@ export default function({ color, style, menuItems }){
         return(
             <ul
                 style={{...dropdownStyle, backgroundColor:neutral, borderColor:color}}
-                ref={dropdownRef}
             >
                 {menuItems.map((item,index) => {
                     return (
@@ -55,11 +52,10 @@ export default function({ color, style, menuItems }){
             <div
                 ref={hamburgerRef}
                 aria-expanded={false}
-                aria-name='menu'
                 style={{...containerStyle, ...style}}
                 {...onHover({cursor:'pointer'})}
                 {...onActive({transform:'scale(0.95)'})}
-                onClick={() => toggleDropdown()}
+                onClick={toggleDropdown}
                 aria-label='show options menu'
             >
                 {/* three coloured divs, middle one has top/bottom margin to separate them */}

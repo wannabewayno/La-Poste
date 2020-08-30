@@ -4,7 +4,7 @@ import { Color } from 'grass-roots-react';
 
 export default function(){
 
-    const { wildCard, dark } = useSelector(state => state.color);
+    const { wildCard } = useSelector(state => state.color);
 
     return (
         <footer style={{backgroundColor:wildCard, height:'5vh',textAlign:'center', position:'fixed', bottom:'0', width:'100%'}}>

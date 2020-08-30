@@ -25,6 +25,7 @@ export default function(){
                 break;
             }
             case false: console.log(`Error: ${message}`); break; // let the user know with a tool tip or something
+            default: console.log('Error, not authenticated');
         }
     }
 
@@ -46,7 +47,6 @@ export default function(){
                         color={neutral}
                     />
                     <SubmitButton
-                        color='rgb(255,255,255)'
                         text='Sign in'
                         size='medium'
                         skin='flat'

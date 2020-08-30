@@ -18,7 +18,7 @@ export const dropdownStyle = {
     borderBottomRightRadius:'5px',
     border:'1px solid black',
     margin:'0',
-    display:'none',
+    display:'flex',
     alignItems:'center',
     flexDirection:'column',
     position:'fixed',

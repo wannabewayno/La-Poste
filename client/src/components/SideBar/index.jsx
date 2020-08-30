@@ -6,12 +6,12 @@ import API from '../../utils/API';
 import randomParagraph from '../../utils/randomParagraph';
 import { useSelector, useDispatch } from 'react-redux';
 import { updatePosts, startFetchingPosts, stopFetchingPosts } from '../../redux/actions';
-import color from '../../redux/reducers/color';
+import Spinner from '../Spinner';
 
 export default function(){
     const dispatch = useDispatch();
 
-    const { posts:{ allPosts }, color:{ neutral, accent } } = useSelector(state => state);
+    const { posts:{ allPosts }, color:{ neutral, accent }, isFetchingPosts } = useSelector(state => state);
 
     // this keeps track of userId a poorly named convention from jsonplaceholder. 
     // posts are grouped by userId from the API endpoint
@@ -98,6 +98,8 @@ export default function(){
                         style={{marginTop:'1em'}}
                         color={accent}
                     />
+                    {/* shows an image when fetching posts */}
+                    {isFetchingPosts? <Spinner/>: null}
                     <PostList posts={allPosts}/>
             </aside>
             {/* this button on shows up on mobile devices, only reveals the aside when pressed */}

@@ -3,7 +3,6 @@ import { Color } from 'grass-roots-react';
 import { paletteStyle, flex, top, right, bottom, left } from './style';
 import { useDispatch } from 'react-redux';
 import { updateColorScheme } from '../../../redux/actions';
-import { minWidth } from 'grass-roots-react';
 import useWindowSize from '../../../hooks/useWindowSize';
 
 export default function({ style, palettes, currentTheme }) {
