@@ -102,6 +102,10 @@ A rough Estimate for man hours put into this project
 * built ThemePicker, allows user to choose a colour palette for the site from a list of defined palettes
 ### 9:30am break
 
+### 9:36am start
+
+###
+
 
 
 
