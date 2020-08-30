@@ -4,9 +4,11 @@ A rough Estimate for man hours put into this project
 For full transparency, as that's how I like to operate. 
 I had to read up on redux and Auth with react-router as I haven't had experience with these in projects before, so a big chunk of time went in to the concepts before the application.
 
+I know it said to keep external packages to a minimum, if you see 'grass-roots-react' or 'instant-mvc' mentioned, these are just both my packages, so think of them as an extension of myself.
+
 I had fun with redux actually, and will use again. Although now reflecting, there are better ways to implement this by localising the store to the pages or HOC and passing the states down as props more often. 
 
-It was over the time budget, however I wanted to put in a good mobile first design that looked and felt nice. The devil's in the details.
+It was over the time budget, however I wanted to put in a good mobile first design that looked and felt nice. The devil's in the details, and I wasn't 100% sure how involved of a solution you were expecting.
 
 Originally I planned on using mongo atlas/mongoose for the authentication but in the end I'm using a simple JSON db in Heroku to get the idea across, so that's why this project has a server with api routes etc... As soon I see authentication I Immediately set the build up like this.
 
@@ -123,15 +125,6 @@ Anyway, I hope you enjoy.
 
 ### 11:11am start
 * Add dropdown for the hamburger that renders the buttons it replaces in a container
-* add event listner to the document to listen for clicks outside of the dropdown and close the dropdown
+* add event listener to the document to listen for clicks outside of the dropdown and close the dropdown
 * Adding a little validation to the signin form for completeness
 ### 2:42pm stop (3.5hr)
-
-
-
-
-
-
-
-
-
