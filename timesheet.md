@@ -108,8 +108,10 @@ A rough Estimate for man hours put into this project
 ### 11:00am break
 
 ### 11:11am start
-
-###
+* Add dropdown for the hamburger that renders the buttons it replaces in a container
+* add event listner to the document to listen for clicks outside of the dropdown and close the dropdown
+* Adding a little validation to the signin form for completeness
+### 2:42pm 
 
 
 

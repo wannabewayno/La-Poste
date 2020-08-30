@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FormContainer, SubmitButton, Username, Password } from 'grass-roots-react';
 import { useHistory } from 'react-router-dom'
 import API from '../../utils/API';
@@ -10,22 +10,33 @@ export default function(){
     const dispatch = useDispatch();
     const { neutral, accent } = useSelector(state => state.color);
 
+    // authentication state for UI purposes
+    const [failedAuthentication, setFailedAuthentication ] = useState({
+        usernameFailed:false,
+        passwordFailed:false,
+        message:'',
+        color:'rgb(230,82,82)',
+        whatFailed:undefined
+    });
+
     // need history for react-routing
     const history = useHistory();
    
     async function login(formData){
         // sends login data to '/api/signin' and returns true if authenticated
-        const { isAuthenticated, message, username } = await API.authenticateUser(formData);
-        console.log(username);
-        switch(isAuthenticated){
-            case true: {
-                dispatch(logIn());
-                dispatch(updateCurrentUser(username))
-                history.push('/dashboard');
-                break;
+        const { isAuthenticated, message, username, whatFailed } = await API.authenticateUser(formData);
+    
+        if(isAuthenticated){
+            dispatch(logIn()); // set the user's state to logged in
+            dispatch(updateCurrentUser(username)) // update the currentUser to reflect this user
+            history.push('/dashboard'); // re-direct the user to the dashboard
+        } else { 
+            console.log(`Error: ${message}`); // log the error in the console;
+            switch(whatFailed){
+                // set failedAuthentication to true so form updates with appropriate message
+                case 'username': setFailedAuthentication({...failedAuthentication, usernameFailed:true, message, whatFailed}); break; 
+                case 'password': setFailedAuthentication({...failedAuthentication, passwordFailed:true, message, whatFailed}); break;
             }
-            case false: console.log(`Error: ${message}`); break; // let the user know with a tool tip or something
-            default: console.log('Error, not authenticated');
         }
     }
 
@@ -34,17 +45,17 @@ export default function(){
             <FormContainer onSubmit={login}>
                     <Username
                         name={{display:'Username', id:'username', toDisplay:true}}
-                        placeholder=''
+                        placeholder={failedAuthentication.usernameFailed? failedAuthentication.message : ''}
                         label={{width:'65px'}}
                         container={{margin:'15px auto'}}
-                        color={neutral}
+                        color={failedAuthentication.usernameFailed? failedAuthentication.color:neutral}
                     />
                     <Password
                         name={{display:'Password', id:'password', toDisplay:true}}
-                        placeholder=''
-                        label={{width:'65px'}}
+                        placeholder={failedAuthentication.passwordFailed? failedAuthentication.message:''}
+                        label={{width:'65px'}}ral
                         container={{margin:'15px auto'}}
-                        color={neutral}
+                        color={failedAuthentication.passwordFailed? failedAuthentication.color:neutral}
                     />
                     <SubmitButton
                         text='Sign in'

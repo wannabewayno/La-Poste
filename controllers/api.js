@@ -15,10 +15,10 @@ module.exports = {
             if(user.password === password) {
                 res.status(200).json({isAuthenticated:true, username, message:'Authenticated'}) // authenticated
             } else {
-                res.status(503).json({isAuthenticated:false, message:'Incorrect Password'}) // 503 error, not allowed
+                res.status(503).json({isAuthenticated:false, message:'Incorrect Password', whatFailed:'password'}) // 503 error, not allowed
             }
         } else { 
-            res.status(404).json({isAuthenticated:false, message:'Username not found'}); 
+            res.status(404).json({isAuthenticated:false, message:'Username not found', whatFailed:'username'}); 
         }
     },
     getUserByID(req,res){
@@ -44,10 +44,8 @@ module.exports = {
         });
     },
     updateUser(req,res){
-        console.log(req.body);
         const { username, updatedInfo } = req.body
-        console.log(username);
-        console.log(updatedInfo);
+    
         // get the json database
         const dbPath = path.resolve('./db/users.json');
         const users = JSON.parse(fs.readFileSync(dbPath));
