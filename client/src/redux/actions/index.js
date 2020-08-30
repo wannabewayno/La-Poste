@@ -51,6 +51,18 @@ export const closeModal = () => {
     }
 }
 
+export const openDropdown = () => {
+    return {
+        type:'openDropdown'
+    }
+}
+
+export const closeDropdown = () => {
+    return {
+        type:'closeDropdown'
+    }
+}
+
 export const logIn = () => {
     return {
         type:'logIn'
